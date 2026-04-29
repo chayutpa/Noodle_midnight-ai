@@ -1,0 +1,30 @@
+[project]
+name = "milkyway-ai"
+version = "0.1.0"
+description = "A small Python utility library for MilkyWay AI calculations."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+keywords = ["milkyway", "ai", "statistics", "python"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "google-generativeai",
+    "python-dotenv",
+]
+
+[project.urls]
+"Source" = "https://github.com/chayutpa/MilkyWay-ai"
+
+[tool.pytest.ini_options]
+minversion = "7.0"
+addopts = "-q"
+testpaths = ["tests"]
+
+[build-system]
+requires = ["setuptools>=65.0", "wheel"]
+build-backend = "setuptools.build_meta"
