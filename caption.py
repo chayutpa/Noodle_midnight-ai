@@ -22,7 +22,7 @@ def configure_genai() -> None:
 def build_prompt(menu_name: str, price: str) -> str:
     """สร้าง prompt ภาษาไทยสำหรับให้โมเดลเขียน caption แบบกันเอง."""
     return (
-        "เขียน caption Instagram เป็นภาษาไทย สำหรับร้าน MilkLab cafe\n"
+        "เขียน caption Instagram เป็นภาษาไทย สำหรับร้าน ก๋วยเตี๋ยวกลางดึก\n"
         "ให้มีโทนเป็นกันเอง อ่านแล้วน่ารัก ไม่เป็นทางการ และสั้นกระชับ\n"
         "สร้าง 3 แบบดังนี้:\n"
         "1. สไตล์น่ารัก\n"
@@ -56,8 +56,8 @@ def generate_captions(menu_name: str, price: str) -> str:
 
 def main() -> None:
     """อ่านข้อมูลจากผู้ใช้และแสดง caption ภาษาไทยแบบเป็นกันเอง."""
-    menu_name = input("ชื่อเมนู: ").strip() or "ลาเต้เย็น"
-    price = input("ราคา: ").strip() or "95 บาท"
+    menu_name = input("ชื่อเมนู: ").strip() or "บะหมี่เหลือง"
+    price = input("ราคา: ").strip() or "50 บาท"
 
     print("\nกำลังสร้าง caption แบบภาษาไทยให้เลยนะ...\n")
     try:
