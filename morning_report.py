@@ -43,7 +43,7 @@ def build_summary(rows: list[list[str]], yesterday: str) -> str:
         yesterday_rows.append((menu, quantity, price, total))
 
     if not yesterday_rows:
-        return f"ไม่มีรายการขายของเมื่อวานนี้เลย 🥹\nมาเติมความหวานกันใหม่วันนี้นะ!"
+        return f"ไม่มีรายการขายของเมื่อวานนี้เลย "
 
     total_revenue = sum(item[3] for item in yesterday_rows)
     total_items = sum(item[1] for item in yesterday_rows)
@@ -58,7 +58,7 @@ def build_summary(rows: list[list[str]], yesterday: str) -> str:
 
     lines = [
         f"สรุปยอดขายเมื่อวานนี้ ({yesterday}) ☀️",
-        f"รวมทั้งหมด {total_items} ชิ้น/แก้ว ยอดรวม {total_revenue:.2f} บาท 💸",
+        f"รวมทั้งหมด {total_items} ชิ้น ยอดรวม {total_revenue:.2f} บาท 💸",
         f"เมนูขายดีสุด: {best_menu} ({best_qty} ชิ้น) ยอด {best_value:.2f} บาท ❤️",
         "\nรายละเอียด:"
     ]
@@ -66,7 +66,7 @@ def build_summary(rows: list[list[str]], yesterday: str) -> str:
     for menu, qty, price, total in yesterday_rows:
         lines.append(f"- {menu}: {qty} x {price:.2f} = {total:.2f} บาท")
 
-    lines.append("\nขอให้วันนี้สดใส สดชื่น เหมือนลาเต้ถ้วยโปรดนะคะ ☕✨")
+    lines.append("\nขอให้วันนี้ชีวิตมีรสชาติ กลมกล่อมและแซ่บลงตัวเหมือนก๋วยเตี๋ยวชามโปรดนะครับ 🔥🍜")
     return "\n".join(lines)
 
 

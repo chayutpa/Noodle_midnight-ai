@@ -13,7 +13,7 @@ client = genai.Client(api_key=os.getenv("GOOGLE_API_KEY"))
 MODEL = "gemini-2.5-flash"
 
 SYSTEM_INSTRUCTION = """
-คุณคือ Demi ผู้ช่วย AI ของร้าน MilkLab°
+คุณคือ Noodle ผู้ช่วย AI ของร้าน ก๋วยเตี๋ยวกลางดึก
 หน้าที่ของนักศึกษาคือแปลงคำสั่งภาษาไทยเป็น JSON action
 ตอบกลับเป็น JSON เท่านั้น ในรูปแบบ:
 {"action": "log_sale", "args": {"menu": "...", "quantity": N, "price": N}}
@@ -67,7 +67,7 @@ def run_agent(user_input: str) -> str:
 
 
 if __name__ == "__main__":
-    print("Demi Agent พร้อมรับคำสั่ง (พิมพ์ 'exit' เพื่อออก)\n")
+    print("Noodle Agent พร้อมรับคำสั่ง (พิมพ์ 'exit' เพื่อออก)\n")
     while True:
         user_input = input("คุณ: ").strip()
         if user_input.lower() == "exit":
